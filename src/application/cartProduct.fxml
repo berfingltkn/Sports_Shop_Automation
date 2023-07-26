@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="160.0" prefWidth="180.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cartProductController">
+   <children>
+      <VBox layoutX="25.0" layoutY="-35.0" prefHeight="165.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="anchor_cartPage" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #000000;">
+               <children>
+                  <Label fx:id="label_productName" layoutX="14.0" layoutY="7.0" text="Product Name" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label_productprice" alignment="CENTER_RIGHT" layoutX="132.0" layoutY="9.0" prefHeight="18.0" prefWidth="30.0" text="0$" textFill="#f4f2f2">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ADD8E6;">
+               <children>
+                  <ImageView fx:id="imageviewAna" fitHeight="80.0" fitWidth="123.0" layoutX="31.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btn_addcart" layoutX="100.0" layoutY="90.0" mnemonicParsing="false" onAction="#addcartButtonAction" prefHeight="28.0" prefWidth="65.0" text="Add Cart" />
+                  <ChoiceBox fx:id="choice_Size" layoutX="14.0" layoutY="91.0" onDragDetected="#ChoiceSizeAction" prefHeight="26.0" prefWidth="73.0" />
+                  <Line endX="44.600006103515625" endY="-67.4000015258789" layoutX="133.0" layoutY="41.0" startX="44.600006103515625" startY="86.99999237060547" stroke="#ff6ec7" strokeWidth="5.0" />
+                  <Line endX="-71.80000305175781" endY="69.49998474121094" layoutX="75.0" layoutY="61.0" startX="102.60000610351562" startY="69.5" stroke="#ff6ec7" strokeWidth="5.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

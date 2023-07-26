@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <VBox layoutX="0" prefHeight="500.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="anchor_ust" prefHeight="230.0" prefWidth="600.0">
+               <children>
+                  <ImageView fitHeight="230.0" fitWidth="600.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../../OneDrive/Resimler/sportImage/sport_image.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="106.0" layoutY="14.0" prefHeight="74.0" prefWidth="329.0" text="BERF-STORE" textFill="#000000b5">
+                     <font>
+                        <Font name="Bell MT" size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="169.0" layoutY="14.0" prefHeight="18.0" prefWidth="214.0" text="-------------------------------------">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="163.0" layoutY="68.0" prefHeight="18.0" prefWidth="214.0" text="-------------------------------------">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="198.0" text="WELCOME...">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor_alt" prefHeight="209.0" prefWidth="600.0" style="-fx-background-color: #D3C0F9;">
+               <children>
+                  <AnchorPane fx:id="anchor_forgottenPass" prefHeight="270.0" prefWidth="600.0" visible="false">
+                     <children>
+                        <Text layoutX="85.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail :" />
+                        <Text layoutX="16.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter Your İnformation..." wrappingWidth="264.7999511718751">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="67.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number :" />
+                        <Text layoutX="78.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID Number :" />
+                        <Text layoutX="78.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname :" />
+                        <Text layoutX="86.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" />
+                        <Text layoutX="69.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password :" />
+                        <Button fx:id="btn_change" layoutX="400.0" layoutY="111.0" mnemonicParsing="false" onAction="#ChangeAction" onMouseClicked="#ChangeClicked" prefHeight="31.0" prefWidth="83.0" text="Change">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="txt_Cname" layoutX="176.0" layoutY="39.0" />
+                        <TextField fx:id="txt_Csurname" layoutX="176.0" layoutY="74.0" />
+                        <TextField fx:id="txt_CidNumber" layoutX="176.0" layoutY="108.0" />
+                        <TextField fx:id="txt_Cphone" layoutX="176.0" layoutY="142.0" />
+                        <TextField fx:id="txt_Cmail" layoutX="176.0" layoutY="179.0" />
+                        <Button fx:id="button_turnback" layoutX="442.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#TurnBack_Action" prefHeight="31.0" prefWidth="38.0" text="&lt;--" textFill="#dc1818">
+                           <font>
+                              <Font name="Cambria Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <PasswordField fx:id="txt_cnewpass" layoutX="176.0" layoutY="213.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anchor_create" layoutX="-52.0" prefHeight="270.0" prefWidth="600.0" style="-fx-background-color: #D3C0F9;" visible="false">
+                     <children>
+                        <TextField fx:id="txt_surname" layoutX="153.0" layoutY="80.0" />
+                        <Text layoutX="104.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name :" />
+                        <Text layoutX="94.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname :" />
+                        <Text layoutX="78.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID Number :" />
+                        <Text layoutX="67.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="welcome to our family..." wrappingWidth="198.23089599609375">
+                           <font>
+                              <Font name="Bell MT" size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="374.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :" />
+                        <Text layoutX="379.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender :" />
+                        <Text layoutX="74.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth :" />
+                        <Text layoutX="388.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City :" />
+                        <Text layoutX="61.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number :" />
+                        <Text layoutX="383.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E mail :" />
+                        <TextField fx:id="txt_name" layoutX="153.0" layoutY="41.0" />
+                        <TextField fx:id="txt_id" layoutX="153.0" layoutY="123.0" />
+                        <TextField fx:id="txt_birth" layoutX="153.0" layoutY="168.0" />
+                        <TextField fx:id="txt_number" layoutX="153.0" layoutY="208.0" />
+                        <TextField fx:id="txt_city" layoutX="436.0" layoutY="88.0" />
+                        <TextField fx:id="txt_email" layoutX="436.0" layoutY="168.0" />
+                        <Button fx:id="button_create" layoutX="451.0" layoutY="220.0" mnemonicParsing="false" onAction="#CreateAction" prefHeight="26.0" prefWidth="86.0" text="Create" />
+                        <ComboBox fx:id="combo_gender" layoutX="436.0" layoutY="41.0" prefWidth="150.0" />
+                        <Button fx:id="button_turnback1" layoutX="547.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#turnBack1_Action" prefHeight="31.0" prefWidth="38.0" text="&lt;--" textFill="#dc1818">
+                           <font>
+                              <Font name="Cambria Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <PasswordField fx:id="txt_Cpass" layoutX="436.0" layoutY="123.0" />
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="button_signin" layoutX="490.0" layoutY="188.0" mnemonicParsing="false" onAction="#SigninAction" prefHeight="30.0" prefWidth="94.0" text="SIGN IN" textFill="#232121">
+                     <font>
+                        <Font name="Bell MT" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="button_login" layoutX="238.0" layoutY="188.0" mnemonicParsing="false" onAction="#Login_action" prefHeight="30.0" prefWidth="94.0" text="LOGIN">
+                     <font>
+                        <Font name="Bell MT" size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txt_idN" layoutX="225.0" layoutY="97.0" />
+                  <ComboBox fx:id="combo_who" layoutX="225.0" layoutY="53.0" prefWidth="150.0" />
+                  <Text fx:id="labelID" layoutX="134.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID Number :" />
+                  <Text fx:id="labelWho" layoutX="134.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Who ?" />
+                  <Text fx:id="labelpass" layoutX="138.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :" />
+                  <Text fx:id="forgottenPass" fill="#610d25" layoutX="440.0" layoutY="243.0" onMouseClicked="#ForgottenPassClick" strokeType="OUTSIDE" strokeWidth="0.0" text="forgotten password">
+                     <font>
+                        <Font name="Gill Sans MT" size="18.0" />
+                     </font>
+                  </Text>
+                  <PasswordField fx:id="txt_pass" layoutX="225.0" layoutY="136.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor_enalt" layoutX="10.0" layoutY="240.0" prefHeight="209.0" prefWidth="600.0" style="-fx-background-color: #D3C0F9;" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CustomerController">
+   <children>
+      <BorderPane layoutX="100.0" prefHeight="500.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="47.0" prefWidth="600.0" style="-fx-background-color: #FFE5CC;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="button_out" layoutX="511.0" layoutY="11.0" mnemonicParsing="false" onAction="#outAction" onMouseClicked="#SignOut" prefHeight="26.0" prefWidth="34.0" style="-fx-background-color: #FFC04D;" text="X" textFill="#faf8f8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="549.0" layoutY="14.0" prefHeight="18.0" prefWidth="49.0" text="Sign Out" />
+                  <Label layoutX="235.0" layoutY="8.0" prefHeight="30.0" prefWidth="116.0" text="BerfStore" textFill="#282828b8">
+                     <font>
+                        <Font name="Bodoni MT" size="24.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-10.5999755859375" endY="-5.7220458984375E-6" layoutX="351.0" layoutY="39.0" startX="-125.79998779296875" startY="-5.7220458984375E-6" stroke="#9e5151" />
+                  <Line endX="-10.5999755859375" endY="-5.7220458984375E-6" layoutX="350.0" layoutY="10.0" startX="-125.79998779296875" startY="-5.7220458984375E-6" stroke="#9e5151" />
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="453.0" prefWidth="139.0" style="-fx-background-color: #FFC04D;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutY="29.0" prefHeight="30.0" prefWidth="116.0" text="Welcome :)" textFill="#282828b8">
+                     <font>
+                        <Font name="Bodoni MT" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_aboutus" layoutX="3.0" layoutY="385.0" mnemonicParsing="false" onAction="#aboutusButtonAction" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #808080;" stylesheets="@application.css" text="About Us" textFill="#f7f5f5">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_setting" layoutX="3.0" layoutY="317.0" mnemonicParsing="false" onAction="#settingButtonAction" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #808080;" stylesheets="@application.css" text="Settings" textFill="#f7f5f5">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_history" layoutX="2.0" layoutY="245.0" mnemonicParsing="false" onAction="#historyButtonAction" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #808080;" stylesheets="@application.css" text="Order History" textFill="#f7f5f5">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_cart" layoutX="3.0" layoutY="177.0" mnemonicParsing="false" onAction="#cartButtonAction" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #808080;" stylesheets="@application.css" text="Cart" textFill="#f7f5f5" AnchorPane.bottomAnchor="235.8" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="4.199999999999989" AnchorPane.topAnchor="177.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_products" layoutX="4.0" layoutY="108.0" mnemonicParsing="false" onAction="#ProductsButtonAction" prefHeight="40.0" prefWidth="132.0" style="-fx-background-color: #808080;" stylesheets="@application.css" text="Products" textFill="#f7f5f5" AnchorPane.bottomAnchor="304.8" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="3.1999999999999886" AnchorPane.topAnchor="108.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="anchor_ana" prefHeight="452.8" prefWidth="460.8" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="anchor_girisCategory" prefHeight="452.8" prefWidth="460.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" prefHeight="30.0" prefWidth="262.0" text="Enjoy Sports With Berf-Store" textFill="#282828b8">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="231.0" layoutY="38.0" prefHeight="30.0" prefWidth="209.0" text="We are with your sport " textFill="#282828b8">
+                           <font>
+                              <Font name="Bookman Old Style" size="18.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="30.0" layoutY="198.0" prefHeight="98.0" prefWidth="114.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Button fx:id="btn_bicycle" layoutX="-1.0" layoutY="77.0" mnemonicParsing="false" onAction="#bicycleButtonAction" prefWidth="114.0" text="Bicycle">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="57.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.400000000000006" AnchorPane.topAnchor="9.0">
+                                 <image>
+                                    <Image url="@../../../../OneDrive/Resimler/sportImage/bcycle3.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="30.0" layoutY="322.0" prefHeight="98.0" prefWidth="114.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Button fx:id="btn_pilates" layoutY="79.0" mnemonicParsing="false" onAction="#pilatesButtonAction" prefWidth="114.0" text="Pilates/Yoga">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="57.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="37.2" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.400000000000006" AnchorPane.topAnchor="9.0">
+                                 <image>
+                                    <Image url="@../../../../OneDrive/Resimler/sportImage/yoga.png" />
+                                 </image></ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="326.0" layoutY="322.0" prefHeight="98.0" prefWidth="114.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Button fx:id="btn_swimm" layoutY="80.0" mnemonicParsing="false" onAction="#swimmButtonAction" prefWidth="114.0" text="Swimm">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="57.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="37.2" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.400000000000006" AnchorPane.topAnchor="9.0">
+                                 <image>
+                                    <Image url="@../../../../OneDrive/Resimler/sportImage/swimm3.png" />
+                                 </image></ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="183.0" layoutY="322.0" prefHeight="98.0" prefWidth="114.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Button fx:id="btn_voleyball" layoutY="80.0" mnemonicParsing="false" onAction="#voleyballButtonAction" prefWidth="114.0" text="Voleyball">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="57.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="37.2" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.400000000000006" AnchorPane.topAnchor="9.0">
+                                 <image>
+                                    <Image url="@../../../../OneDrive/Resimler/sportImage/2.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="183.0" layoutY="198.0" prefHeight="98.0" prefWidth="114.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Button fx:id="btn_football" layoutY="78.0" mnemonicParsing="false" onAction="#footballButtonAction" prefWidth="114.0" text="Football">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="57.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="37.2" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.400000000000006" AnchorPane.topAnchor="9.0">
+                                 <image>
+                                    <Image url="@../../../../OneDrive/Resimler/sportImage/football4.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="326.0" layoutY="198.0" prefHeight="98.0" prefWidth="114.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Button fx:id="btn_tennis" layoutX="-1.0" layoutY="78.0" mnemonicParsing="false" onAction="#tennisButtonAction" prefWidth="114.0" text="Tennis">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="57.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="37.2" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.400000000000006" AnchorPane.topAnchor="9.0">
+                                 <image>
+                                    <Image url="@../../../../OneDrive/Resimler/sportImage/tennis3.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="183.0" layoutY="76.0" prefHeight="98.0" prefWidth="114.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Button fx:id="btn_badminton" layoutY="74.0" mnemonicParsing="false" onAction="#badmintonButtonAction" prefWidth="114.0" text="Badminton">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="57.0" fitWidth="64.0" layoutX="25.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.400000000000006" AnchorPane.topAnchor="9.0">
+                                 <image>
+                                    <Image url="@../../../../OneDrive/Resimler/sportImage/badminton.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="326.0" layoutY="76.0" prefHeight="98.0" prefWidth="114.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Button fx:id="btn_basketball" layoutY="75.0" mnemonicParsing="false" onAction="#basketballButtonAction" prefWidth="114.0" text="Basketball">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="57.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.400000000000006" AnchorPane.topAnchor="9.0">
+                                 <image>
+                                    <Image url="@../../../../OneDrive/Resimler/sportImage/basketball.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="34.0" layoutY="76.0" prefHeight="98.0" prefWidth="114.0" style="-fx-background-color: #ADD8E6;">
+                           <children>
+                              <Button fx:id="btn_all" layoutY="78.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#allAction" prefWidth="114.0" text="Clothes(All Category)">
+                                 <font>
+                                    <Font name="System Bold" size="10.0" />
+                                 </font>
+                              </Button>
+                              <ImageView fitHeight="57.0" fitWidth="63.0" layoutX="24.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../OneDrive/Resimler/sportImage/all1.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anchor_badminton" prefHeight="452.8" prefWidth="460.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ScrollPane layoutX="14.0" prefHeight="452.8" prefWidth="460.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <GridPane fx:id="menu_gridpane17" prefHeight="18.0" prefWidth="70.0" style="-fx-background-color: #ffffff;">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="anchor_bicycle" prefHeight="452.8" prefWidth="460.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ScrollPane layoutX="78.0" layoutY="71.0" prefHeight="452.8" prefWidth="460.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <GridPane fx:id="menu_gridpane16" prefHeight="18.0" prefWidth="70.0" style="-fx-background-color: #ffffff;">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="anchor_football" prefHeight="452.8" prefWidth="460.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ScrollPane layoutX="87.0" layoutY="14.0" prefHeight="452.8" prefWidth="460.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <GridPane fx:id="menu_gridpane15" prefHeight="18.0" prefWidth="70.0" style="-fx-background-color: #ffffff;">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="anchor_basketball" prefHeight="452.8" prefWidth="460.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ScrollPane prefHeight="452.8" prefWidth="460.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <GridPane fx:id="menu_gridpane14" prefHeight="18.0" prefWidth="70.0" style="-fx-background-color: #ffffff;">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="anchor_tennis" prefHeight="452.8" prefWidth="460.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ScrollPane prefHeight="452.8" prefWidth="460.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <GridPane fx:id="menu_gridpane13" prefHeight="18.0" prefWidth="70.0" style="-fx-background-color: #ffffff;">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="anchor_pilates" prefHeight="452.8" prefWidth="460.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ScrollPane prefHeight="452.8" prefWidth="460.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <GridPane fx:id="menu_gridpane12" prefHeight="18.0" prefWidth="70.0" style="-fx-background-color: #ffffff;">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="anchor_voleyball" prefHeight="452.8" prefWidth="460.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ScrollPane prefHeight="452.8" prefWidth="460.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <GridPane fx:id="menu_gridpane11" prefHeight="18.0" prefWidth="70.0" style="-fx-background-color: #ffffff;">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="anchor_swimming" prefHeight="452.8" prefWidth="460.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ScrollPane prefHeight="452.8" prefWidth="460.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <GridPane fx:id="menu_gridpane1" prefHeight="18.0" prefWidth="70.0" style="-fx-background-color: #ffffff;">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="anchor_cart" prefHeight="452.8" prefWidth="460.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="viewCart" layoutX="22.0" layoutY="57.0" onMouseClicked="#viewCartClicked" prefHeight="359.0" prefWidth="274.0">
+                          <columns>
+                            <TableColumn fx:id="column_pname" prefWidth="91.19995498657227" text="Product Name" />
+                            <TableColumn fx:id="column_price" prefWidth="60.800048828125" text="Price" />
+                              <TableColumn fx:id="column_image" prefWidth="55.20001220703125" text="Image" />
+                              <TableColumn fx:id="column_size" prefWidth="68.00004577636719" text="Size" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btn_remove" layoutX="324.0" layoutY="321.0" mnemonicParsing="false" onAction="#removeAction" prefHeight="38.0" prefWidth="86.0" style="-fx-background-color: #e570bb;" text="Remove All">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_pay" layoutX="322.0" layoutY="380.0" mnemonicParsing="false" onAction="#payAction" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: #19b12b;" text="Pay" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_deleteSelected" layoutX="324.0" layoutY="270.0" mnemonicParsing="false" onAction="#deleteSelectedAction" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: #f24135;" text="X" textFill="#262525">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="367.0" layoutY="280.0" text="Delete Selected" textFill="#ea0b0b">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="324.0" layoutY="189.0" text="Total :">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label_total" layoutX="344.0" layoutY="218.0" text="15" textFill="RED" />
+                        <Label layoutX="370.0" layoutY="217.0" text="\$" textFill="#ff0404">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imageview_cart" fitHeight="80.0" fitWidth="123.0" layoutX="308.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="anchor_historyorders" prefHeight="452.8" prefWidth="460.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="view_history" layoutX="11.0" layoutY="78.0" prefHeight="261.0" prefWidth="438.0">
+                          <columns>
+                            <TableColumn fx:id="column_orderdate" prefWidth="83.2000150680542" text="order Date" />
+                            <TableColumn fx:id="column_orderstatus" prefWidth="82.39996337890625" text="Order Status" />
+                              <TableColumn fx:id="column_orderFee" prefWidth="70.4000244140625" text="Order Fee" />
+                              <TableColumn fx:id="column_productname" prefWidth="87.19999694824219" text="Name Product" />
+                              <TableColumn fx:id="column_categoryproduct" prefWidth="115.199951171875" text="Category Product" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="anchor_setting" prefHeight="452.8" prefWidth="460.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="86.0" layoutY="20.0" text="Name :" textFill="#534e4e" AnchorPane.rightAnchor="327.6">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="66.0" layoutY="63.0" text="Surname :" textFill="#534e4e" AnchorPane.rightAnchor="328.4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="86.0" layoutY="110.0" text="ID No :" textFill="#534e4e" AnchorPane.rightAnchor="328.4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="62.0" layoutY="160.0" text="Password :" textFill="#534e4e" AnchorPane.rightAnchor="328.4">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="76.0" layoutY="203.0" text="Gender :" textFill="#534e4e" AnchorPane.rightAnchor="328.8">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="99.0" layoutY="291.0" text="City :" textFill="#534e4e" AnchorPane.rightAnchor="328.20000000000005">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="67.0" layoutY="249.0" text="BirthDay :" textFill="#534e4e" AnchorPane.rightAnchor="328.20000000000005">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="60.0" layoutY="330.0" text="Phone No :" textFill="#534e4e" AnchorPane.rightAnchor="328.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="85.0" layoutY="374.0" text="E mail :" textFill="#534e4e" AnchorPane.rightAnchor="327.8">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="81.0" layoutY="414.0" text="Adress :" textFill="#534e4e" AnchorPane.rightAnchor="327.8">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txt_nameC" layoutX="160.0" layoutY="16.0" />
+                        <TextField fx:id="txt_emailC" layoutX="160.0" layoutY="370.0" />
+                        <TextField fx:id="txt_phanoenoC" layoutX="160.0" layoutY="326.0" />
+                        <TextField fx:id="txt_cityC" layoutX="160.0" layoutY="287.0" />
+                        <TextField fx:id="txt_birthC" layoutX="160.0" layoutY="245.0" />
+                        <TextField fx:id="txt_genderC" layoutX="160.0" layoutY="199.0" />
+                        <TextField fx:id="txt_passC" layoutX="160.0" layoutY="156.0" />
+                        <TextField fx:id="txt_idNoc" layoutX="160.0" layoutY="106.0" />
+                        <TextField fx:id="txt_surnameC" layoutX="160.0" layoutY="59.0" />
+                        <TextField fx:id="txt_adressC" layoutX="160.0" layoutY="410.0" />
+                        <Button fx:id="button_save" layoutX="380.0" layoutY="403.0" mnemonicParsing="false" onAction="#SaveButtonAction" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: #33b566;" text="Save" textFill="#f40766">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="anchor_aboutus" prefHeight="452.8" prefWidth="460.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="17.0" layoutY="21.0" prefHeight="30.0" prefWidth="116.0" text="About Us" textFill="#282828b8">
+                           <font>
+                              <Font name="Bodoni MT" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_CENTER" layoutY="77.0" prefHeight="18.0" prefWidth="441.0" text="Berf-Store is an e-commerce platform specialized in sporting goods and">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="7.0" layoutY="96.0" text="equipment. Since 2010, we have been working to provide our customers">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Line endX="100.0" layoutX="114.0" layoutY="51.0" startX="-100.0" />
+                        <Label layoutY="187.0" prefHeight="18.0" prefWidth="459.0" text="we're constantly working to provide our customers with the best shopping experience." />
+                        <Label layoutX="14.0" layoutY="167.0" text="Customer satisfaction has always been the top priority for us. That's why">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="5.0" layoutY="134.0" text="affordable prices that will help athletes achieve their best performance.">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="7.0" layoutY="115.0" text="with the best quality products. Our goal is to provide products at the most">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="6.0" layoutY="224.0" text="offer the most suitable solutions.">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="11.0" layoutY="371.0" text="Contact Address :">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="11.0" layoutY="290.0" text="Location :" AnchorPane.rightAnchor="385.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="2.0" layoutY="205.0" text="Our expert team is always ready to understand the needs of each customer and">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="imageview_location" fitHeight="35.0" fitWidth="35.0" layoutX="26.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../OneDrive/Resimler/sportImage/locationIcon.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="69.0" layoutY="310.0" text="Istanbul - Taksim" />
+                        <Label layoutX="71.0" layoutY="328.0" text="İstiklal, İstiklal AVM, İstiklal Cd. No:50, 34435 Beyoğlu" />
+                        <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="31.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../OneDrive/Resimler/sportImage/phoneIcon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imageMail" fitHeight="35.0" fitWidth="35.0" layoutX="194.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../OneDrive/Resimler/sportImage/mailIcon2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imageInstagram" fitHeight="35.0" fitWidth="35.0" layoutX="324.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../OneDrive/Resimler/sportImage/instagramIcon.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="61.0" layoutY="403.0" text="(0212) 249 10 30" textFill="#c10909">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="237.0" layoutY="403.0" text="berfStore" textFill="#c10909">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="369.0" layoutY="408.0" text="Berf-Store" textFill="#c10909">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="237.0" layoutY="416.0" text="\@gmail.com" textFill="#c10909">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="anchor_all" prefHeight="452.8" prefWidth="460.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ScrollPane layoutX="70.0" layoutY="73.0" prefHeight="452.8" prefWidth="460.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <GridPane fx:id="menu_gridpane" prefHeight="18.0" prefWidth="70.0" style="-fx-background-color: #ffffff;">
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
