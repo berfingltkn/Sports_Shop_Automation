@@ -33,22 +33,24 @@ At the entrance of the customer, the products greet us first. The customer can l
 ![Screenshot_13](https://github.com/berfingltkn/Sports_Shop_Automation/assets/101794581/a0a2f1f3-f764-4174-aac3-8947847b6e4e)<br/><br/>
 
 ![Screenshot_14](https://github.com/berfingltkn/Sports_Shop_Automation/assets/101794581/00ac4c29-46bb-47ba-b8c5-3b5dcd0761de)<br/><br/>
----------------------------------
 
-<br/>
-#### Database
-- **Admin** Table <br/>
-![Screenshot_15](https://github.com/berfingltkn/Sports_Shop_Automation/assets/101794581/f3c043d0-bc57-450e-9748-48339bb1ee54)<br/><br/>
-- **cart** Table <br/>
+
+ Database
+ <br/>
+ **Admin** Table <br/>
+![Screenshot_15](https://github.com/berfingltkn/Sports_Shop_Automation/assets/101794581/a536373b-764d-4bac-a772-794f1adb660b)
+
+<br/><br/>
+ **cart** Table <br/>
 ![Screenshot_16](https://github.com/berfingltkn/Sports_Shop_Automation/assets/101794581/1ff875e5-6a67-484c-af8a-3f678e510d36)<br/><br/>
-- **customer** Table <br/>
+ **customer** Table <br/>
 ![Screenshot_17](https://github.com/berfingltkn/Sports_Shop_Automation/assets/101794581/dd84ba75-2dbc-4bed-8580-4f03bfee7126)<br/><br/>
-- **employee** Table <br/>
+ **employee** Table <br/>
 ![Screenshot_18](https://github.com/berfingltkn/Sports_Shop_Automation/assets/101794581/33b65458-0948-4021-88e3-7d2ac0bd6b15)<br/><br/>
 
-- **orders** Table <br/>
+ **orders** Table <br/>
 ![Screenshot_19](https://github.com/berfingltkn/Sports_Shop_Automation/assets/101794581/96af7850-edff-4726-a130-d774d17c9030)<br/><br/>
 
-- **products** Table <br/>
+ **products** Table <br/>
 ![Screenshot_20](https://github.com/berfingltkn/Sports_Shop_Automation/assets/101794581/fa6c5ec5-241d-4193-afe8-ca5bfd1ceec4)<br/><br/>
 
